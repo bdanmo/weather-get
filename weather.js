@@ -1,5 +1,6 @@
 const http = require('http'),
-      api = require('./api.json');
+      api = require('./api.json'),
+      print = require('./print');
 
 function getWeather (city, state) {
     const request = http.get(`http://api.wunderground.com/api/${api.key}/conditions/q/${state}/${city}.json`, res => {
@@ -8,12 +9,14 @@ function getWeather (city, state) {
             body += dataChunk;
         });
         res.on('end', () => {
-            //parse the data
-            console.log(JSON.parse(body));
-            //print the data
+            let weather = JSON.parse(body);
+            print.temperature(parsed.current_observation);
         });
         
     })
 }
+
+// print temp details
+// handle errrors
 
 module.exports.get = getWeather; 
