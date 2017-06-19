@@ -4,4 +4,9 @@ function temperature (data) {
     console.log(message);
 }
 
+function error (error, type = "Error") {
+    console.error(`${type}: ${error.message}`)
+}
+
 module.exports.temperature = temperature;
+module.exports.error = error;
