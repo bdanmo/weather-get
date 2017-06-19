@@ -10,7 +10,7 @@ function getWeather (city, state) {
         });
         res.on('end', () => {
             let weather = JSON.parse(body);
-            print.temperature(parsed.current_observation);
+            print.temperature(weather.current_observation);
         });
         
     })
