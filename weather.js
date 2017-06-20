@@ -12,8 +12,19 @@ function getWeather (city, state) {
                     body += dataChunk;
                 });
                 res.on('end', () => {
-                    let weather = JSON.parse(body);
-                    print.temperature(weather.current_observation);
+                    try {
+                        let weather = JSON.parse(body);
+                        if (weather.current_observation)
+                            print.temperature(weather.current_observation);
+                        else {
+                            let message = "Invalid city/state",
+                                error = new Error(message);
+                            print.error(error)
+                        }
+                    } catch (error) {
+                        print(error, 'JSON Parsing Error')
+                    }
+                    
                 })
             } else {
                 let code = res.statusCode,
