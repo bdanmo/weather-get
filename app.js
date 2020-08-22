@@ -1,8 +1,5 @@
+const weather = require('./weather');
 
-const weather = require('./weather'),
-      city = process.argv.slice(2, 3)[0],
-      state = process.argv.slice(3, 4)[0];
+const zip = process.argv.splice(2);
 
-weather.get(city, state);
-
-
+weather.get(zip);

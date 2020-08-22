@@ -1,0 +1,25 @@
+{
+  "name": "weather-get",
+  "version": "0.0.1",
+  "description": "A simple command line app to get the weather when passed a city and state.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdanmo/weather-get.git"
+  },
+  "keywords": [
+    "weather",
+    "get",
+    "node",
+    "javascript"
+  ],
+  "author": "Brendan Moran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdanmo/weather-get/issues"
+  },
+  "homepage": "https://github.com/bdanmo/weather-get#readme"
+}
