@@ -1,4 +1,4 @@
-const weather = require('./weather');
+const weather = require('./modules/weather');
 
 const zip = process.argv.splice(2);
 
