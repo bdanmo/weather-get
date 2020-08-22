@@ -4,7 +4,6 @@ function convertTemp(K) {
 
 function time(unix) {
   const date = new Date(unix * 1000);
-  console.log(date);
   const hour = date.getHours();
   const minute = date.getMinutes();
   return `${hour}:${minute}`;

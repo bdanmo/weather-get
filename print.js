@@ -1,7 +1,6 @@
 const util = require('./util.js');
 
 function weather(data) {
-  console.log(data);
   let message = `
     *-- Weather for ${data.name} --* 
     General conditions: ${data.weather[0].description} 
